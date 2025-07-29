@@ -1,0 +1,163 @@
+/* Base Styles */
+:root {
+  --primary-color: #4361ee;
+  --facebook-color: #3b5998;
+  --twitter-color: #1da1f2;
+  --linkedin-color: #0077b5;
+  --whatsapp-color: #25d366;
+  --animation-speed: 0.4s;
+  --easing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.social-share-container {
+  position: relative;
+  margin: 2rem;
+}
+
+.share-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Trigger Button */
+.share-trigger {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+  transition: all var(--animation-speed) ease;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+}
+
+.share-trigger .share-text {
+  position: absolute;
+  white-space: nowrap;
+  left: 100%;
+  margin-left: 15px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--animation-speed) ease;
+  color: #333;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.share-trigger:hover .share-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Share Icons */
+.share-icons {
+  display: flex;
+  position: absolute;
+  left: 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-speed) var(--easing);
+}
+
+.share-wrapper.active .share-icons {
+  opacity: 1;
+  pointer-events: auto;
+  left: 60px;
+}
+
+.share-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  color: white;
+  text-decoration: none;
+  transform: translateY(20px) scale(0.5);
+  opacity: 0;
+  transition: all var(--animation-speed) var(--easing);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.share-wrapper.active .share-icon {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Individual icon animations */
+.share-wrapper.active .share-icon:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.share-wrapper.active .share-icon:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.share-wrapper.active .share-icon:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.share-wrapper.active .share-icon:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Icon colors */
+.facebook { background: var(--facebook-color); }
+.twitter { background: var(--twitter-color); }
+.linkedin { background: var(--linkedin-color); }
+.whatsapp { background: var(--whatsapp-color); }
+
+/* Hover effects */
+.share-icon:hover {
+  transform: translateY(-5px) scale(1.1) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip */
+.share-icon::after {
+  content: attr(data-network);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: #333;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.share-icon:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
