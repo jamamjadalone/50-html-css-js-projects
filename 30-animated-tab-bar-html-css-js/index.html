@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Tab Bar</title>
+  <meta name="description" content="A modern tab bar with a sliding animated indicator that switches content panels.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/30-animated-tab-bar-html-css-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/30-animated-tab-bar-html-css-js/">
+  <meta property="og:title" content="Animated Tab Bar">
+  <meta property="og:description" content="A modern tab bar with a sliding animated indicator that switches content panels.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Animated Tab Bar">
+  <meta name="twitter:description" content="A modern tab bar with a sliding animated indicator that switches content panels.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <div class="app">
+    <main class="content">
+      <section class="panel active" data-panel="home">
+        <h2>Home</h2>
+        <p>Welcome to the animated tab bar demo. Browse the tabs to switch content.</p>
+      </section>
+      <section class="panel" data-panel="search">
+        <h2>Search</h2>
+        <p>Find anything across the entire app with a fast, smart search experience.</p>
+      </section>
+      <section class="panel" data-panel="favorites">
+        <h2>Favorites</h2>
+        <p>Your saved items live here so you can come back to them at any time.</p>
+      </section>
+      <section class="panel" data-panel="profile">
+        <h2>Profile</h2>
+        <p>Manage your account, preferences and personal information in one place.</p>
+      </section>
+      <section class="panel" data-panel="settings">
+        <h2>Settings</h2>
+        <p>Customize the app to match your taste with themes and configuration options.</p>
+      </section>
+    </main>
+    <nav class="tab-bar">
+      <button class="tab active" data-tab="home">Home</button>
+      <button class="tab" data-tab="search">Search</button>
+      <button class="tab" data-tab="favorites">Favorites</button>
+      <button class="tab" data-tab="profile">Profile</button>
+      <button class="tab" data-tab="settings">Settings</button>
+      <span class="indicator" id="indicator"></span>
+    </nav>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

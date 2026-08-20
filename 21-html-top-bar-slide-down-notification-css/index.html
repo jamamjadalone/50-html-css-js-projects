@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down Notification Bar</title>
+    <meta name="description" content="A notification bar that smoothly slides down from the top of the page after a short delay and can be dismissed.">
+    <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/21-html-top-bar-slide-down-notification-css/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/21-html-top-bar-slide-down-notification-css/">
+  <meta property="og:title" content="Slide Down Notification Bar">
+  <meta property="og:description" content="A notification bar that smoothly slides down from the top of the page after a short delay and can be dismissed.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Slide Down Notification Bar">
+  <meta name="twitter:description" content="A notification bar that smoothly slides down from the top of the page after a short delay and can be dismissed.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+    <aside class="top-bar" id="topBar" role="status" aria-live="polite">
+        <div class="top-bar-inner">
+            <span class="badge">NEW</span>
+            <p class="message">We just launched version 2.0 with a brand-new dark mode. <a href="#" class="link">Read more</a></p>
+            <button class="dismiss" id="dismissBtn" aria-label="Dismiss notification">&times;</button>
+        </div>
+    </aside>
+
+    <main class="content">
+        <div class="card">
+            <h1>Slide Down Notification</h1>
+            <p>This top bar drops in from above the viewport a moment after the page loads. Click the close button to send it back up.</p>
+            <button class="retry" id="retryBtn">Show notification again</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

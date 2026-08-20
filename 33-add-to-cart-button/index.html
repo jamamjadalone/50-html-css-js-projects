@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Cart Button Animation</title>
+  <meta name="description" content="An animated add to cart button with cart bounce and success feedback.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/33-add-to-cart-button/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/33-add-to-cart-button/">
+  <meta property="og:title" content="Add to Cart Button Animation">
+  <meta property="og:description" content="An animated add to cart button with cart bounce and success feedback.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Add to Cart Button Animation">
+  <meta name="twitter:description" content="An animated add to cart button with cart bounce and success feedback.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="center">
+    <h1>Add to Cart</h1>
+    <p>Click the button to add an item to your cart.</p>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-info">
+        <h3>Wireless Headphones</h3>
+        <p class="price">$49.99</p>
+        <button class="cart-btn" id="cartBtn" type="button">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="btn-label">Add to Cart</span>
+        </button>
+      </div>
+    </div>
+    <p class="feedback" id="feedback" role="status"></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

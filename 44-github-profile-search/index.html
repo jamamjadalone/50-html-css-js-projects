@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Search</title>
+  <meta name="description" content="Search any GitHub username to view their avatar, bio, stats, and recently updated repositories.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/44-github-profile-search/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/44-github-profile-search/">
+  <meta property="og:title" content="GitHub Profile Search">
+  <meta property="og:description" content="Search any GitHub username to view their avatar, bio, stats, and recently updated repositories.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GitHub Profile Search">
+  <meta name="twitter:description" content="Search any GitHub username to view their avatar, bio, stats, and recently updated repositories.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="container">
+    <h1>GitHub Profile Search</h1>
+    <p class="subtitle">Enter a username to explore a GitHub profile</p>
+
+    <form id="searchForm" class="search-bar">
+      <input type="text" id="usernameInput" placeholder="e.g. octocat" autocomplete="off" spellcheck="false" value="octocat">
+      <button type="submit" id="searchBtn" class="btn-search">Search</button>
+    </form>
+
+    <div id="message" class="message" hidden></div>
+
+    <div id="spinner" class="spinner-wrap" hidden>
+      <div class="spinner" aria-label="Loading"></div>
+    </div>
+
+    <section id="profileCard" class="profile-card" hidden>
+      <div class="profile-header">
+        <img id="avatar" class="avatar" alt="Profile avatar">
+        <div class="profile-meta">
+          <h2 id="name" class="name">-</h2>
+          <p id="login" class="login">@username</p>
+          <p id="bio" class="bio">No bio provided.</p>
+          <p class="location" id="location"></p>
+        </div>
+        <a id="profileLink" class="view-profile" href="#" target="_blank" rel="noopener noreferrer">View Profile</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-value" id="followers">0</span>
+          <span class="stat-label">Followers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="following">0</span>
+          <span class="stat-label">Following</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="publicRepos">0</span>
+          <span class="stat-label">Public Repos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="company">-</span>
+          <span class="stat-label">Company</span>
+        </div>
+      </div>
+
+      <div class="repos-section">
+        <h3>Recently Updated Repositories</h3>
+        <ul id="reposList" class="repos-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

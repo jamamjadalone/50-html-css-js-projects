@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Drum Kit - Play Drums with Your Keyboard</title>
+  <meta name="description" content="Play a virtual drum kit in your browser using keyboard keys or clicks, with synthesized sounds generated live by the Web Audio API.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/47-javascript-drum-kit/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/47-javascript-drum-kit/">
+  <meta property="og:title" content="JavaScript Drum Kit - Play Drums with Your Keyboard">
+  <meta property="og:description" content="Play a virtual drum kit in your browser using keyboard keys or clicks, with synthesized sounds generated live by the Web Audio API.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JavaScript Drum Kit - Play Drums with Your Keyboard">
+  <meta name="twitter:description" content="Play a virtual drum kit in your browser using keyboard keys or clicks, with synthesized sounds generated live by the Web Audio API.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Drum Kit</h1>
+      <p>Press the keys A S D F G H J K L or click the pads to play.</p>
+    </header>
+
+    <div class="pads" id="pads">
+      <div class="pad" data-key="a" data-sound="kick" tabindex="0">
+        <kbd>A</kbd>
+        <span class="sound">Kick</span>
+      </div>
+      <div class="pad" data-key="s" data-sound="snare" tabindex="0">
+        <kbd>S</kbd>
+        <span class="sound">Snare</span>
+      </div>
+      <div class="pad" data-key="d" data-sound="hihat" tabindex="0">
+        <kbd>D</kbd>
+        <span class="sound">Hi-Hat</span>
+      </div>
+      <div class="pad" data-key="f" data-sound="tom-low" tabindex="0">
+        <kbd>F</kbd>
+        <span class="sound">Tom Low</span>
+      </div>
+      <div class="pad" data-key="g" data-sound="tom-high" tabindex="0">
+        <kbd>G</kbd>
+        <span class="sound">Tom High</span>
+      </div>
+      <div class="pad" data-key="h" data-sound="clap" tabindex="0">
+        <kbd>H</kbd>
+        <span class="sound">Clap</span>
+      </div>
+      <div class="pad" data-key="j" data-sound="crash" tabindex="0">
+        <kbd>J</kbd>
+        <span class="sound">Crash</span>
+      </div>
+      <div class="pad" data-key="k" data-sound="ride" tabindex="0">
+        <kbd>K</kbd>
+        <span class="sound">Ride</span>
+      </div>
+      <div class="pad" data-key="l" data-sound="open-hat" tabindex="0">
+        <kbd>L</kbd>
+        <span class="sound">Open Hat</span>
+      </div>
+    </div>
+
+    <p class="footer-note">Sounds are synthesized live with the Web Audio API, so they always work offline.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center { width: 100%; max-width: 460px; padding: 40px 20px; text-align: center; }
+h1 { font-size: 2rem; margin-bottom: 8px; }
+.center > p { color: #9ca3af; margin-bottom: 40px; }
+
+.dropdown { position: relative; text-align: left; }
+.select {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #1a2a38;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #e5e7eb;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.select:hover { border-color: #22d3ee; }
+.select.open { border-color: #22d3ee; box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2); }
+.chevron { transition: transform 0.3s ease; color: #22d3ee; }
+.select.open .chevron { transform: rotate(180deg); }
+
+.options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  list-style: none;
+  background: #12202c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 50;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+.options.open { opacity: 1; visibility: visible; transform: translateY(0); }
+.options li {
+  padding: 14px 20px;
+  cursor: pointer;
+  color: #cbd5e1;
+  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+.options li:hover { background: rgba(34, 211, 238, 0.15); color: #fff; padding-left: 26px; }
+.options li.selected { background: rgba(34, 211, 238, 0.25); color: #fff; font-weight: 600; }
+
+.result { margin-top: 30px; color: #7dd3fc; font-size: 0.95rem; min-height: 24px; }

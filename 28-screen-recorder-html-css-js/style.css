@@ -1,0 +1,119 @@
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --border: #334155;
+  --text: #f1f5f9;
+  --primary: #3b82f6;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.recorder {
+  width: 100%;
+  max-width: 640px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.status {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.status.recording {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.15);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary { background: var(--primary); }
+.btn-warning { background: var(--warning); }
+.btn-danger { background: var(--danger); }
+.btn-success { background: var(--success); }
+
+#preview {
+  width: 100%;
+  border-radius: 12px;
+  background: #000;
+  border: 1px solid var(--border);
+}
+
+.error {
+  margin-top: 1rem;
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}

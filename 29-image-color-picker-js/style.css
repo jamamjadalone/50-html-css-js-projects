@@ -1,0 +1,187 @@
+:root {
+  --bg: #111318;
+  --surface: #1a1d26;
+  --border: #2a2e3b;
+  --text: #f2f4f8;
+  --muted: #8b90a0;
+  --accent: #6366f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.app {
+  width: 100%;
+  max-width: 960px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+.upload-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.65rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.upload-btn:hover {
+  filter: brightness(1.15);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.25rem;
+}
+
+.canvas-wrap {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+
+#image-canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  cursor: crosshair;
+}
+
+.magnifier {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+.swatch {
+  height: 90px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: background 0.15s ease;
+}
+
+.color-info p {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--border);
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin: 1.25rem 0 0.75rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.history {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.history li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.history .dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.empty-state {
+  color: var(--muted);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .panel {
+    order: 2;
+  }
+  .canvas-wrap {
+    min-height: 280px;
+  }
+}

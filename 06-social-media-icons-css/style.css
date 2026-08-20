@@ -1,0 +1,115 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center { text-align: center; padding: 40px 20px; }
+h1 { font-size: 2.2rem; margin-bottom: 8px; }
+p { color: #9fb3c8; margin-bottom: 50px; }
+.icons { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; }
+.icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.icon:hover { transform: translateY(-8px) scale(1.05); }
+.icon.fb { background: #1877f2; }
+.icon.fb:hover { box-shadow: 0 14px 28px rgba(24, 119, 242, 0.5); }
+.icon.tw { background: #1da1f2; }
+.icon.tw:hover { box-shadow: 0 14px 28px rgba(29, 161, 242, 0.5); }
+.icon.ig { background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 80%); }
+.icon.ig:hover { box-shadow: 0 14px 28px rgba(214, 36, 159, 0.5); }
+.icon.yt { background: #ff0000; }
+.icon.yt:hover { box-shadow: 0 14px 28px rgba(255, 0, 0, 0.5); }
+.icon.li { background: #0a66c2; }
+.icon.li:hover { box-shadow: 0 14px 28px rgba(10, 102, 194, 0.5); }
+.icon.gh { background: #333; }
+.icon.gh:hover { box-shadow: 0 14px 28px rgba(51, 51, 51, 0.6); }
+
+/* ---- CSS-drawn icon glyphs ---- */
+.icon span { position: relative; display: block; }
+
+/* Facebook: f */
+.icon.fb span::before {
+  content: "f";
+  font-size: 34px;
+  font-weight: 700;
+  font-family: Georgia, serif;
+  color: #fff;
+}
+
+/* Twitter: bird-like check + wing (simplified "t") */
+.icon.tw span::before {
+  content: "t";
+  font-size: 34px;
+  font-weight: 700;
+  font-family: Georgia, serif;
+  color: #fff;
+  font-style: italic;
+}
+
+/* Instagram: rounded square + circle + dot */
+.icon.ig span { width: 30px; height: 30px; border: 3px solid #fff; border-radius: 8px; }
+.icon.ig span::after {
+  content: "";
+  position: absolute;
+  width: 12px; height: 12px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon.ig span::before {
+  content: "";
+  position: absolute;
+  width: 4px; height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  top: 4px; right: 4px;
+}
+
+/* YouTube: rounded rect + play triangle */
+.icon.yt span { width: 30px; height: 21px; border: 3px solid #fff; border-radius: 8px; }
+.icon.yt span::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent #fff;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* LinkedIn: "in" */
+.icon.li span::before {
+  content: "in";
+  font-size: 26px;
+  font-weight: 700;
+  font-family: Georgia, serif;
+  color: #fff;
+}
+
+/* GitHub: filled circle with a notch (simplified cat) */
+.icon.gh span { width: 28px; height: 28px; background: #fff; border-radius: 50% 50% 50% 50%; position: relative; }
+.icon.gh span::before {
+  content: "";
+  position: absolute;
+  width: 28px; height: 12px;
+  background: #333;
+  left: 0; bottom: -4px;
+  border-radius: 4px 4px 0 0;
+}
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .icons { gap: 16px; }
+}

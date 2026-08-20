@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toast Notification System</title>
+  <meta name="description" content="Trigger success, error, and warning toasts that stack, slide in with animation, and auto-dismiss.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/39-toast-notification/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/39-toast-notification/">
+  <meta property="og:title" content="Toast Notification System">
+  <meta property="og:description" content="Trigger success, error, and warning toasts that stack, slide in with animation, and auto-dismiss.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Toast Notification System">
+  <meta name="twitter:description" content="Trigger success, error, and warning toasts that stack, slide in with animation, and auto-dismiss.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="container">
+    <h1>Toast Notifications</h1>
+    <p class="subtitle">Click a button to fire a notification</p>
+
+    <div class="controls">
+      <button class="btn btn-success" data-type="success">Success</button>
+      <button class="btn btn-error" data-type="error">Error</button>
+      <button class="btn btn-warning" data-type="warning">Warning</button>
+      <button class="btn btn-info" data-type="info">Info</button>
+    </div>
+
+    <div class="toast-options">
+      <label class="check">
+        <input type="checkbox" id="autoDismiss" checked>
+        <span>Auto dismiss</span>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="stackTop">
+        <span>Stack at top</span>
+      </label>
+    </div>
+  </main>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

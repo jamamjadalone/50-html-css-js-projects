@@ -3,83 +3,760 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>50+ HTML, CSS, JS Projects</title>
-  <meta name="description" content="50+ HTML, CSS, JavaScript projects with source code for beginners and advanced learners.">
+  <title>50+ HTML, CSS & JavaScript Projects with Source Code | Frontend Projects for Beginners & Developers</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Explore 50+ free HTML, CSS and JavaScript projects with source code. Beginner to advanced frontend projects including CSS animations, JavaScript apps, games and UI components. Perfect for practice and learning web development.">
+  <meta name="keywords" content="HTML CSS JavaScript projects, frontend projects, web development projects, CSS animation projects, JavaScript projects for beginners, HTML CSS JS source code, mini projects web development, practice projects frontend, GitHub projects web development, 50 HTML CSS projects">
+  <meta name="author" content="jamamjadalone">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a1a2e">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/">
+  <meta property="og:title" content="50+ HTML, CSS & JavaScript Projects with Source Code">
+  <meta property="og:description" content="50+ free frontend projects built with HTML, CSS and JavaScript. Beginner to advanced with source code and live demos.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="50+ HTML, CSS & JavaScript Projects with Source Code">
+  <meta name="twitter:description" content="50+ free frontend projects built with HTML, CSS and JavaScript. Beginner to advanced with source code and live demos.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": "50+ HTML, CSS, JS Projects",
+    "@type": "CollectionPage",
+    "name": "50+ HTML, CSS & JavaScript Projects",
+    "url": "https://jamamjadalone.github.io/50-html-css-js-projects/",
+    "description": "A collection of 50+ beginner to advanced frontend projects built with HTML, CSS and JavaScript with full source code.",
     "author": {
       "@type": "Person",
       "name": "jamamjadalone"
     },
-    "description": "A repository containing 50+ HTML, CSS & JavaScript projects with source code for practice and learning.",
-    "url": "https://jamamjadalone.github.io/50-html-css-js-projects/"
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "50+ HTML CSS JS Projects",
+      "url": "https://jamamjadalone.github.io/50-html-css-js-projects/"
+    },
+    "hasPart": [
+      { "@type": "WebPage", "name": "Simple 404 Page", "url": "https://jamamjadalone.github.io/50-html-css-js-projects/01-simple-404-page/" },
+      { "@type": "WebPage", "name": "Drawing App", "url": "https://jamamjadalone.github.io/50-html-css-js-projects/27-drawing-app-javascript/" },
+      { "@type": "WebPage", "name": "Notes App", "url": "https://jamamjadalone.github.io/50-html-css-js-projects/31-notes-app-html-css-js/" },
+      { "@type": "WebPage", "name": "Music Player", "url": "https://jamamjadalone.github.io/50-html-css-js-projects/40-music-player-html-css-js/" },
+      { "@type": "WebPage", "name": "Tic Tac Toe Game", "url": "https://jamamjadalone.github.io/50-html-css-js-projects/46-tic-tac-toe-js/" },
+      { "@type": "WebPage", "name": "Number Guessing Game", "url": "https://jamamjadalone.github.io/50-html-css-js-projects/50-number-guessing-game-js/" }
+    ]
   }
   </script>
+
   <style>
-    body {font-family: Poppins, sans-serif; background: #f4f4f4; text-align: center; margin: 0; padding: 20px;}
-    h1 {color: #333;}
-    ul {list-style: none; padding: 0;}
-    li {margin: 8px 0;}
-    a {color: #007BFF; text-decoration: none;}
-    a:hover {color: #0056b3;}
+    :root {
+      --bg: #0f0f1a;
+      --bg-card: #1a1a2e;
+      --bg-card-hover: #232342;
+      --primary: #6c63ff;
+      --primary-dark: #564fd8;
+      --accent: #00d4ff;
+      --text: #eaeaf6;
+      --text-muted: #9a9abf;
+      --border: #2e2e4a;
+      --radius: 14px;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", "Poppins", system-ui, sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, #1b1b3a 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Hero */
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(108, 99, 255, 0.15);
+      border: 1px solid rgba(108, 99, 255, 0.4);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(90deg, #fff, var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p.subtitle {
+      max-width: 720px;
+      margin: 16px auto 0;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .stat {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 24px;
+      min-width: 120px;
+    }
+    .stat strong { display: block; font-size: 1.6rem; color: var(--accent); }
+    .stat span { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* Search + filters */
+    .controls {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 15, 26, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .controls-inner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+    .search-box input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      padding: 12px 18px 12px 44px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+    }
+    .search-box svg {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      stroke: var(--text-muted);
+    }
+    .filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .chip:hover { border-color: var(--primary); color: var(--text); }
+    .chip.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Grid */
+    main { padding: 40px 0 60px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      display: block;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(108, 99, 255, 0.12), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background: var(--bg-card-hover);
+      box-shadow: var(--shadow);
+    }
+    .card:hover::before { opacity: 1; }
+    .card .num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+    .card .desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+    .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+    .tag.html { background: rgba(227, 79, 38, 0.18); color: #ff9d7a; }
+    .tag.css { background: rgba(38, 132, 255, 0.18); color: #7ab8ff; }
+    .tag.js { background: rgba(247, 223, 30, 0.18); color: #ffe65c; }
+    .card .go {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(108, 99, 255, 0.15);
+      display: grid;
+      place-items: center;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .card:hover .go { background: var(--primary); transform: translateX(2px); }
+    .card .go svg { width: 14px; height: 14px; stroke: #fff; fill: none; stroke-width: 2.5; }
+
+    .no-results {
+      text-align: center;
+      color: var(--text-muted);
+      padding: 60px 0;
+      font-size: 1.05rem;
+      display: none;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 100;
+    }
+    .skip-link:focus { left: 0; }
+
+    @media (max-width: 600px) {
+      header { padding: 40px 16px 28px; }
+      .controls { position: static; }
+    }
   </style>
 </head>
 <body>
-  <h1>50+ HTML, CSS, JS Projects</h1>
-  <p>Explore 50+ front-end projects with source code.</p>
-  <ul><li><a href="01-simple-404-page/" target="_blank">01-simple-404-page</a></li>
-<li><a href="02-social-media-share-icon-animation/" target="_blank">02-social-media-share-icon-animation</a></li>
-<li><a href="03-card-with-hover-effect/" target="_blank">03-card-with-hover-effect</a></li>
-<li><a href="04-button-hover-effect/" target="_blank">04-button-hover-effect</a></li>
-<li><a href="05-share-button-using-css/" target="_blank">05-share-button-using-css</a></li>
-<li><a href="06-social-media-icons-css/" target="_blank">06-social-media-icons-css</a></li>
-<li><a href="07-double-line-css-button-hover-effects/" target="_blank">07-double-line-css-button-hover-effects</a></li>
-<li><a href="08-footer-using-html-css/" target="_blank">08-footer-using-html-css</a></li>
-<li><a href="09-image-animation-using-html-css/" target="_blank">09-image-animation-using-html-css</a></li>
-<li><a href="10-dropdown-menu-using-html-css/" target="_blank">10-dropdown-menu-using-html-css</a></li>
-<li><a href="11-list-items-hover-effect/" target="_blank">11-list-items-hover-effect</a></li>
-<li><a href="12-custom-checkbox-using-html-css/" target="_blank">12-custom-checkbox-using-html-css</a></li>
-<li><a href="13-box-loading-animation-css/" target="_blank">13-box-loading-animation-css</a></li>
-<li><a href="14-glassmorphism-login-form-html-css/" target="_blank">14-glassmorphism-login-form-html-css</a></li>
-<li><a href="15-card-image-hover-effect/" target="_blank">15-card-image-hover-effect</a></li>
-<li><a href="16-dropdown-list-html-css/" target="_blank">16-dropdown-list-html-css</a></li>
-<li><a href="17-custom-toggle-switch-using-css/" target="_blank">17-custom-toggle-switch-using-css</a></li>
-<li><a href="18-card-3d-hover-effect/" target="_blank">18-card-3d-hover-effect</a></li>
-<li><a href="19-name-animation-using-css/" target="_blank">19-name-animation-using-css</a></li>
-<li><a href="20-neon-light-text-effect-css/" target="_blank">20-neon-light-text-effect-css</a></li>
-<li><a href="21-html-top-bar-slide-down-notification-css/" target="_blank">21-html-top-bar-slide-down-notification-css</a></li>
-<li><a href="22-custom-checkbox-css/" target="_blank">22-custom-checkbox-css</a></li>
-<li><a href="23-css-timeline-vertical/" target="_blank">23-css-timeline-vertical</a></li>
-<li><a href="24-responsive-bootstrap-navbar/" target="_blank">24-responsive-bootstrap-navbar</a></li>
-<li><a href="25-the-gift-using-css/" target="_blank">25-the-gift-using-css</a></li>
-<li><a href="26-new-year-countdown/" target="_blank">26-new-year-countdown</a></li>
-<li><a href="27-drawing-app-javascript/" target="_blank">27-drawing-app-javascript</a></li>
-<li><a href="28-screen-recorder-html-css-js/" target="_blank">28-screen-recorder-html-css-js</a></li>
-<li><a href="29-image-color-picker-js/" target="_blank">29-image-color-picker-js</a></li>
-<li><a href="30-animated-tab-bar-html-css-js/" target="_blank">30-animated-tab-bar-html-css-js</a></li>
-<li><a href="31-notes-app-html-css-js/" target="_blank">31-notes-app-html-css-js</a></li>
-<li><a href="32-calendar-html-css-js/" target="_blank">32-calendar-html-css-js</a></li>
-<li><a href="33-add-to-cart-button/" target="_blank">33-add-to-cart-button</a></li>
-<li><a href="34-search-filter-js/" target="_blank">34-search-filter-js</a></li>
-<li><a href="35-progress-steps-html-css-js/" target="_blank">35-progress-steps-html-css-js</a></li>
-<li><a href="36-hidden-search-bar/" target="_blank">36-hidden-search-bar</a></li>
-<li><a href="37-hamburger-menu-css-js/" target="_blank">37-hamburger-menu-css-js</a></li>
-<li><a href="38-increment-counter/" target="_blank">38-increment-counter</a></li>
-<li><a href="39-toast-notification/" target="_blank">39-toast-notification</a></li>
-<li><a href="40-music-player-html-css-js/" target="_blank">40-music-player-html-css-js</a></li>
-<li><a href="41-speech-to-text-js/" target="_blank">41-speech-to-text-js</a></li>
-<li><a href="42-copy-to-clipboard-js/" target="_blank">42-copy-to-clipboard-js</a></li>
-<li><a href="43-programming-quote-generator/" target="_blank">43-programming-quote-generator</a></li>
-<li><a href="44-github-profile-search/" target="_blank">44-github-profile-search</a></li>
-<li><a href="45-age-calculator-js/" target="_blank">45-age-calculator-js</a></li>
-<li><a href="46-tic-tac-toe-js/" target="_blank">46-tic-tac-toe-js</a></li>
-<li><a href="47-javascript-drum-kit/" target="_blank">47-javascript-drum-kit</a></li>
-<li><a href="48-javascript-image-slider/" target="_blank">48-javascript-image-slider</a></li>
-<li><a href="49-random-jokes-generator-js/" target="_blank">49-random-jokes-generator-js</a></li>
-<li><a href="50-number-guessing-game-js/" target="_blank">50-number-guessing-game-js</a></li>
-<li><a href="51-speech-recognition-js/" target="_blank">51-speech-recognition-js</a></li></ul>
+  <a class="skip-link" href="#projects">Skip to projects</a>
+
+  <header>
+    <div class="container">
+      <span class="badge">Learn • Build • Practice</span>
+      <h1>50+ HTML, CSS &amp; JavaScript Projects with Source Code</h1>
+      <p class="subtitle">A hand-picked collection of <strong>51 frontend projects</strong> — from CSS animations and UI components to full JavaScript apps, tools and games. Every project includes complete source code and a live demo. Perfect for beginners learning web development and developers sharpening their skills.</p>
+      <div class="stats">
+        <div class="stat"><strong>51</strong><span>Projects</span></div>
+        <div class="stat"><strong>HTML</strong><span>Structure</span></div>
+        <div class="stat"><strong>CSS</strong><span>Styling &amp; Animations</span></div>
+        <div class="stat"><strong>JavaScript</strong><span>Interactivity</span></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="controls" aria-label="Search and filter projects">
+    <div class="container controls-inner">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="search" placeholder="Search projects... (e.g. calculator, animation, game)" aria-label="Search projects">
+      </div>
+      <div class="filter-group" role="group" aria-label="Filter by category">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="css">CSS</button>
+        <button class="chip" data-filter="js">JavaScript</button>
+        <button class="chip" data-filter="game">Games</button>
+        <button class="chip" data-filter="ui">UI Components</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="projects">
+    <div class="container">
+      <div class="grid" id="grid">
+        <a class="card" href="01-simple-404-page/" data-tags="css html ui">
+          <span class="num">Project 01</span>
+          <h3>Simple 404 Page</h3>
+          <p class="desc">A clean animated 404 page with CSS effects and a friendly error message.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="02-social-media-share-icon-animation/" data-tags="css html ui">
+          <span class="num">Project 02</span>
+          <h3>Social Media Share Icon Animation</h3>
+          <p class="desc">Animated social media share icons that expand and slide out on hover.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="03-card-with-hover-effect/" data-tags="css html ui">
+          <span class="num">Project 03</span>
+          <h3>Card with Hover Effect</h3>
+          <p class="desc">A stylish profile card with smooth hover animations and subtle transitions.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="04-button-hover-effect/" data-tags="css html ui">
+          <span class="num">Project 04</span>
+          <h3>Button Hover Effect</h3>
+          <p class="desc">Creative button hover animations with sliding fills and ripple effects.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="05-share-button-using-css/" data-tags="css html ui">
+          <span class="num">Project 05</span>
+          <h3>Share Button using CSS</h3>
+          <p class="desc">A pure CSS share button that expands to reveal social media options.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="06-social-media-icons-css/" data-tags="css html ui">
+          <span class="num">Project 06</span>
+          <h3>Social Media Icons CSS</h3>
+          <p class="desc">Beautiful social media icons built entirely with CSS with hover effects.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="07-double-line-css-button-hover-effects/" data-tags="css html ui">
+          <span class="num">Project 07</span>
+          <h3>Double Line CSS Button Hover Effects</h3>
+          <p class="desc">Elegant buttons with animated double-line borders on hover.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="08-footer-using-html-css/" data-tags="css html ui">
+          <span class="num">Project 08</span>
+          <h3>Footer using HTML &amp; CSS</h3>
+          <p class="desc">A modern responsive website footer with columns, links and social icons.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="09-image-animation-using-html-css/" data-tags="css html ui">
+          <span class="num">Project 09</span>
+          <h3>Image Animation using HTML &amp; CSS</h3>
+          <p class="desc">Animated image effects — zoom, shake and transitions using pure CSS.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="10-dropdown-menu-using-html-css/" data-tags="css html ui">
+          <span class="num">Project 10</span>
+          <h3>Dropdown Menu using HTML &amp; CSS</h3>
+          <p class="desc">A clean pure CSS dropdown menu with smooth open/close animations.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="11-list-items-hover-effect/" data-tags="css html ui">
+          <span class="num">Project 11</span>
+          <h3>List Items Hover Effect</h3>
+          <p class="desc">Interactive list items with animated highlight effects on hover.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="12-custom-checkbox-using-html-css/" data-tags="css html ui">
+          <span class="num">Project 12</span>
+          <h3>Custom Checkbox using HTML &amp; CSS</h3>
+          <p class="desc">Stylish custom checkboxes with smooth toggle animations.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="13-box-loading-animation-css/" data-tags="css html ui">
+          <span class="num">Project 13</span>
+          <h3>Box Loading Animation CSS</h3>
+          <p class="desc">A pure CSS bouncing box loading animation for modern interfaces.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="14-glassmorphism-login-form-html-css/" data-tags="css html ui">
+          <span class="num">Project 14</span>
+          <h3>Glassmorphism Login Form</h3>
+          <p class="desc">A modern glassmorphism-style login form with frosted glass effects.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="15-card-image-hover-effect/" data-tags="css html ui">
+          <span class="num">Project 15</span>
+          <h3>Card Image Hover Effect</h3>
+          <p class="desc">Image cards with zoom and overlay text reveal on hover.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="16-dropdown-list-html-css/" data-tags="css html ui">
+          <span class="num">Project 16</span>
+          <h3>Dropdown List HTML &amp; CSS</h3>
+          <p class="desc">A versatile dropdown list component built with HTML and CSS.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="17-custom-toggle-switch-using-css/" data-tags="css html ui">
+          <span class="num">Project 17</span>
+          <h3>Custom Toggle Switch</h3>
+          <p class="desc">Animated iOS-style toggle switches built with pure CSS.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="18-card-3d-hover-effect/" data-tags="css html ui">
+          <span class="num">Project 18</span>
+          <h3>Card 3D Hover Effect</h3>
+          <p class="desc">Cards that tilt and float in 3D space with depth on hover.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="19-name-animation-using-css/" data-tags="css html ui">
+          <span class="num">Project 19</span>
+          <h3>Name Animation using CSS</h3>
+          <p class="desc">Animated letter-by-letter name reveal using CSS keyframes.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="20-neon-light-text-effect-css/" data-tags="css html ui">
+          <span class="num">Project 20</span>
+          <h3>Neon Light Text Effect</h3>
+          <p class="desc">Glowing neon text effects with CSS text-shadow and animations.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="21-html-top-bar-slide-down-notification-css/" data-tags="css html ui">
+          <span class="num">Project 21</span>
+          <h3>Top Bar Slide-Down Notification</h3>
+          <p class="desc">An animated slide-down notification bar that appears from the top.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="22-custom-checkbox-css/" data-tags="css html ui">
+          <span class="num">Project 22</span>
+          <h3>Custom Checkbox CSS</h3>
+          <p class="desc">Another take on custom checkboxes with gradient and scale animations.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="23-css-timeline-vertical/" data-tags="css html ui">
+          <span class="num">Project 23</span>
+          <h3>CSS Timeline Vertical</h3>
+          <p class="desc">A vertical timeline component with alternating entries and dots.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="24-responsive-bootstrap-navbar/" data-tags="css html ui">
+          <span class="num">Project 24</span>
+          <h3>Responsive Bootstrap Navbar</h3>
+          <p class="desc">A responsive navigation bar built with the Bootstrap framework.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="25-the-gift-using-css/" data-tags="css html ui">
+          <span class="num">Project 25</span>
+          <h3>The Gift using CSS</h3>
+          <p class="desc">A gift box drawn and animated entirely with CSS shapes.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="26-new-year-countdown/" data-tags="css html js">
+          <span class="num">Project 26</span>
+          <h3>New Year Countdown</h3>
+          <p class="desc">A live countdown timer to the New Year with days, hours, minutes and seconds.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="27-drawing-app-javascript/" data-tags="js html css">
+          <span class="num">Project 27</span>
+          <h3>Drawing App</h3>
+          <p class="desc">A canvas-based drawing app with color picker, brush size and clear options.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="28-screen-recorder-html-css-js/" data-tags="js html css">
+          <span class="num">Project 28</span>
+          <h3>Screen Recorder</h3>
+          <p class="desc">A browser-based screen recorder using the MediaRecorder API.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="29-image-color-picker-js/" data-tags="js html css">
+          <span class="num">Project 29</span>
+          <h3>Image Color Picker</h3>
+          <p class="desc">Click any pixel in an image to instantly get its HEX color code.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="30-animated-tab-bar-html-css-js/" data-tags="js html css ui">
+          <span class="num">Project 30</span>
+          <h3>Animated Tab Bar</h3>
+          <p class="desc">A sleek animated bottom tab bar with smooth indicator transitions.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="31-notes-app-html-css-js/" data-tags="js html css app">
+          <span class="num">Project 31</span>
+          <h3>Notes App</h3>
+          <p class="desc">A full notes app with add, edit, delete and localStorage persistence.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="32-calendar-html-css-js/" data-tags="js html css ui">
+          <span class="num">Project 32</span>
+          <h3>Calendar</h3>
+          <p class="desc">An interactive calendar with month navigation and date highlighting.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="33-add-to-cart-button/" data-tags="css html ui">
+          <span class="num">Project 33</span>
+          <h3>Add to Cart Button</h3>
+          <p class="desc">An animated add-to-cart button with a flying cart feedback animation.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="34-search-filter-js/" data-tags="js html css ui">
+          <span class="num">Project 34</span>
+          <h3>Search Filter</h3>
+          <p class="desc">A live search and filter UI that instantly narrows down list items.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="35-progress-steps-html-css-js/" data-tags="js html css ui">
+          <span class="num">Project 35</span>
+          <h3>Progress Steps</h3>
+          <p class="desc">A multi-step form progress indicator with animated step transitions.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="36-hidden-search-bar/" data-tags="css html ui">
+          <span class="num">Project 36</span>
+          <h3>Hidden Search Bar</h3>
+          <p class="desc">A search icon that expands into a full input field with a click.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="37-hamburger-menu-css-js/" data-tags="js html css ui">
+          <span class="num">Project 37</span>
+          <h3>Hamburger Menu</h3>
+          <p class="desc">An animated hamburger menu icon that morphs into a close button.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="38-increment-counter/" data-tags="js html css ui">
+          <span class="num">Project 38</span>
+          <h3>Increment Counter</h3>
+          <p class="desc">Animated counters that count up to a target number when in view.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="39-toast-notification/" data-tags="js html css ui">
+          <span class="num">Project 39</span>
+          <h3>Toast Notification</h3>
+          <p class="desc">Stackable toast notifications with success, error and warning styles.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="40-music-player-html-css-js/" data-tags="js html css app">
+          <span class="num">Project 40</span>
+          <h3>Music Player</h3>
+          <p class="desc">A working music player with play, pause, next, previous and progress bar.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="41-speech-to-text-js/" data-tags="js html css app">
+          <span class="num">Project 41</span>
+          <h3>Speech to Text</h3>
+          <p class="desc">A speech recognition tool that converts spoken words into text live.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="42-copy-to-clipboard-js/" data-tags="js html css ui">
+          <span class="num">Project 42</span>
+          <h3>Copy to Clipboard</h3>
+          <p class="desc">A utility to copy text to the clipboard with visual feedback.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="43-programming-quote-generator/" data-tags="js html css app">
+          <span class="num">Project 43</span>
+          <h3>Programming Quote Generator</h3>
+          <p class="desc">Displays random programming quotes with a share and copy feature.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="44-github-profile-search/" data-tags="js html css app">
+          <span class="num">Project 44</span>
+          <h3>GitHub Profile Search</h3>
+          <p class="desc">Search any GitHub username to view their profile, repos and stats.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="45-age-calculator-js/" data-tags="js html css app">
+          <span class="num">Project 45</span>
+          <h3>Age Calculator</h3>
+          <p class="desc">Calculates your exact age in years, months and days from any date.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="46-tic-tac-toe-js/" data-tags="js html css game">
+          <span class="num">Project 46</span>
+          <h3>Tic Tac Toe</h3>
+          <p class="desc">A classic Tic Tac Toe game with turn detection and win logic.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="47-javascript-drum-kit/" data-tags="js html css game">
+          <span class="num">Project 47</span>
+          <h3>JavaScript Drum Kit</h3>
+          <p class="desc">Play drum sounds using keyboard keys with a visual beat indicator.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="48-javascript-image-slider/" data-tags="js html css ui">
+          <span class="num">Project 48</span>
+          <h3>JavaScript Image Slider</h3>
+          <p class="desc">A responsive image carousel with navigation arrows and dots.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="49-random-jokes-generator-js/" data-tags="js html css app">
+          <span class="num">Project 49</span>
+          <h3>Random Jokes Generator</h3>
+          <p class="desc">Fetches and displays random programming jokes with a refresh button.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="50-number-guessing-game-js/" data-tags="js html css game">
+          <span class="num">Project 50</span>
+          <h3>Number Guessing Game</h3>
+          <p class="desc">Guess the random number with hints and a limited attempt counter.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="51-speech-recognition-js/" data-tags="js html css app">
+          <span class="num">Project 51</span>
+          <h3>Speech Recognition</h3>
+          <p class="desc">A voice recognition demo that transcribes speech using the Web Speech API.</p>
+          <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span><span class="tag js">JS</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+      <p class="no-results" id="noResults">No projects found. Try a different search or filter.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><a href="https://github.com/jamamjadalone/50-html-css-js-projects">50+ HTML, CSS &amp; JavaScript Projects</a> • Built with HTML, CSS &amp; JavaScript • MIT License</p>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const chips = document.querySelectorAll('.chip');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const noResults = document.getElementById('noResults');
+
+    function applyFilters() {
+      const q = searchInput.value.trim().toLowerCase();
+      const activeFilter = document.querySelector('.chip.active').dataset.filter;
+      let visible = 0;
+
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const tags = card.dataset.tags.split(' ');
+        const matchesSearch = title.includes(q) || tags.some(t => t.includes(q));
+        const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+        const show = matchesSearch && matchesFilter;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        applyFilters();
+      });
+    });
+  </script>
 </body>
 </html>

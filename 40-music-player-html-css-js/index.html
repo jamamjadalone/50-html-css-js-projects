@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <meta name="description" content="A functional music player with play, pause, next and previous track controls, a seek bar, volume control, and a track list.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/40-music-player-html-css-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/40-music-player-html-css-js/">
+  <meta property="og:title" content="Music Player">
+  <meta property="og:description" content="A functional music player with play, pause, next and previous track controls, a seek bar, volume control, and a track list.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Music Player">
+  <meta name="twitter:description" content="A functional music player with play, pause, next and previous track controls, a seek bar, volume control, and a track list.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="player">
+    <div class="player-header">
+      <h1>Wave Player</h1>
+      <span class="badge" id="statusBadge">Stopped</span>
+    </div>
+
+    <div class="cover-wrap">
+      <div class="cover-art" id="coverArt">
+        <span class="cover-note">♪</span>
+      </div>
+    </div>
+
+    <div class="track-info">
+      <h2 class="track-title" id="trackTitle">SoundHelix Song 1</h2>
+      <p class="track-artist" id="trackArtist">SoundHelix</p>
+    </div>
+
+    <div class="progress-wrap">
+      <span class="time" id="currentTime">0:00</span>
+      <input type="range" id="seekBar" class="seek-bar" min="0" max="100" value="0" aria-label="Seek">
+      <span class="time" id="duration">0:00</span>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" class="control-btn" aria-label="Previous track">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+      </button>
+      <button id="playBtn" class="control-btn play-btn" aria-label="Play or pause">
+        <svg id="playIcon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="pauseIcon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+      </button>
+      <button id="nextBtn" class="control-btn" aria-label="Next track">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg>
+      </button>
+    </div>
+
+    <div class="volume-wrap">
+      <span class="volume-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+      </span>
+      <input type="range" id="volumeBar" class="volume-bar" min="0" max="100" value="70" aria-label="Volume">
+    </div>
+
+    <ul class="track-list" id="trackList"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

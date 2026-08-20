@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Image Slider - Responsive Carousel</title>
+  <meta name="description" content="A responsive image slider carousel with navigation arrows, dot indicators, auto-play and pause on hover.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/48-javascript-image-slider/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/48-javascript-image-slider/">
+  <meta property="og:title" content="JavaScript Image Slider - Responsive Carousel">
+  <meta property="og:description" content="A responsive image slider carousel with navigation arrows, dot indicators, auto-play and pause on hover.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JavaScript Image Slider - Responsive Carousel">
+  <meta name="twitter:description" content="A responsive image slider carousel with navigation arrows, dot indicators, auto-play and pause on hover.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="app">
+    <h1 class="title">Image Slider</h1>
+
+    <section class="slider" id="slider" aria-label="Image carousel">
+      <div class="slider-viewport">
+        <div class="slider-track" id="track"></div>
+
+        <button class="arrow arrow-prev" id="prev-btn" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="arrow arrow-next" id="next-btn" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 6 15 12 9 18"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="dots" id="dots"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

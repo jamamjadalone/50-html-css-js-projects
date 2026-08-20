@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center { text-align: center; padding: 40px 20px; }
+h1 { font-size: 2.2rem; margin-bottom: 8px; }
+p { color: #9fb3c8; margin-bottom: 60px; }
+.share-wrap { position: relative; display: flex; justify-content: center; }
+.share-btn {
+  position: relative;
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: #f43f5e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.share-btn:hover { transform: scale(1.08); }
+.share-btn.active { background: #312e81; transform: rotate(45deg); }
+.share-icons { position: absolute; top: 50%; left: 50%; width: 0; height: 0; }
+.share-icons .icon {
+  position: absolute;
+  top: -32px;
+  left: -32px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: 0;
+  transform: scale(0.3) translate(0, 0);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+  pointer-events: none;
+}
+.share-wrap.open .share-icons .icon { opacity: 1; pointer-events: auto; }
+.share-wrap.open .fb { transform: scale(1) translate(-110px, 0); }
+.share-wrap.open .tw { transform: scale(1) translate(-55px, -95px); }
+.share-wrap.open .wa { transform: scale(1) translate(55px, -95px); }
+.share-wrap.open .li { transform: scale(1) translate(110px, 0); }
+.icon.fb { background: #1877f2; }
+.icon.tw { background: #1da1f2; }
+.icon.wa { background: #25d366; }
+.icon.li { background: #0a66c2; }
+.icon:hover { filter: brightness(1.2); }

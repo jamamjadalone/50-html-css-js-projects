@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech to Text</title>
+  <meta name="description" content="Convert spoken words into text using the Web Speech API with live transcript and a list of final results.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/41-speech-to-text-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/41-speech-to-text-js/">
+  <meta property="og:title" content="Speech to Text">
+  <meta property="og:description" content="Convert spoken words into text using the Web Speech API with live transcript and a list of final results.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Speech to Text">
+  <meta name="twitter:description" content="Convert spoken words into text using the Web Speech API with live transcript and a list of final results.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="container">
+    <h1>Speech to Text</h1>
+    <p class="subtitle">Click start and start speaking</p>
+
+    <div class="mic-box">
+      <div class="mic-ring" id="micRing">
+        <div class="mic-core" id="micCore">M</div>
+      </div>
+    </div>
+
+    <div class="status" id="status">Ready</div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn btn-primary">Start Listening</button>
+      <button id="stopBtn" class="btn btn-outline" disabled>Stop</button>
+      <button id="clearBtn" class="btn btn-ghost">Clear</button>
+    </div>
+
+    <div class="live-box">
+      <h2>Live Transcript</h2>
+      <textarea id="liveTranscript" rows="4" placeholder="Your words will appear here as you speak..." readonly></textarea>
+    </div>
+
+    <div class="results-box">
+      <h2>Final Results</h2>
+      <ul id="resultsList" class="results-list"></ul>
+      <p id="emptyResults" class="empty">No results yet.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

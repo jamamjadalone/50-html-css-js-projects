@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Quote Generator</title>
+  <meta name="description" content="Fetch random programming quotes from an API with loading states, copy and share to WhatsApp, and an offline fallback.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/43-programming-quote-generator/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/43-programming-quote-generator/">
+  <meta property="og:title" content="Programming Quote Generator">
+  <meta property="og:description" content="Fetch random programming quotes from an API with loading states, copy and share to WhatsApp, and an offline fallback.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Programming Quote Generator">
+  <meta name="twitter:description" content="Fetch random programming quotes from an API with loading states, copy and share to WhatsApp, and an offline fallback.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="container">
+    <h1>Dev Quotes</h1>
+    <p class="subtitle">Random programming wisdom at the click of a button</p>
+
+    <div class="quote-card">
+      <div class="quote-mark">&ldquo;</div>
+      <blockquote id="quoteText" class="quote-text">Loading a fresh quote...</blockquote>
+      <p id="quoteAuthor" class="quote-author">- Anonymous</p>
+      <div class="spinner" id="spinner" aria-label="Loading"></div>
+    </div>
+
+    <div class="actions">
+      <button id="newQuoteBtn" class="btn btn-primary">New Quote</button>
+      <button id="copyQuoteBtn" class="btn btn-outline">Copy</button>
+      <button id="shareQuoteBtn" class="btn btn-outline">Share on WhatsApp</button>
+    </div>
+
+    <p id="sourceNote" class="source-note"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

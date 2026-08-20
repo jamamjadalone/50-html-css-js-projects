@@ -1,0 +1,122 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center { text-align: center; padding: 40px 20px; }
+h1 { font-size: 2.2rem; margin-bottom: 8px; }
+p { color: #9ca3af; margin-bottom: 50px; }
+.btns { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
+
+.btn {
+  position: relative;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transition: all 0.4s ease;
+}
+/* top-left pair */
+.btn::before {
+  top: 0; left: 0;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+}
+.btn::after {
+  top: 0; left: 0;
+  border-top: 4px solid currentColor;
+  border-left: 4px solid currentColor;
+  width: 0; height: 0;
+}
+/* slide effect via span layers */
+.btn span, .btn b {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.btn b::before,
+.btn b::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Colors */
+.btn.purple { color: #a78bfa; }
+.btn.cyan { color: #22d3ee; }
+.btn.green { color: #4ade80; }
+.btn.coral { color: #fb7185; }
+
+/* Using 4 corner brackets approach with pseudo elements on the button itself */
+.btn.purple::before,
+.btn.purple::after,
+.btn.cyan::before,
+.btn.cyan::after,
+.btn.green::before,
+.btn.green::after,
+.btn.coral::before,
+.btn.coral::after {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.btn:hover::before {
+  top: -2px; left: -2px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  opacity: 1;
+}
+.btn:hover::after {
+  bottom: -2px; right: -2px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  opacity: 1;
+}
+
+/* Move the corners apart on hover to create the "double line" feel */
+.btn::before { top: 0; left: 0; border-top: 2px solid currentColor; border-left: 2px solid currentColor; width: 12px; height: 12px; opacity: 0.6; transition: all 0.4s ease; }
+.btn:hover::before { top: -8px; left: -8px; width: 18px; height: 18px; opacity: 1; }
+.btn::after { bottom: 0; right: 0; border-bottom: 2px solid currentColor; border-right: 2px solid currentColor; width: 12px; height: 12px; opacity: 0.6; transition: all 0.4s ease; }
+.btn:hover::after { bottom: -8px; right: -8px; width: 18px; height: 18px; opacity: 1; }
+
+/* Inner second line */
+.btn i {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.btn i::before {
+  content: "";
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  border: 1px solid currentColor;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.35s ease;
+}
+.btn:hover i::before { opacity: 0.8; transform: scale(1); }
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .btns { gap: 20px; }
+}

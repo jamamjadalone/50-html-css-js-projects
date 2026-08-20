@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Expanding Search Bar</title>
+    <meta name="description" content="A search icon that expands into a smooth sliding search input field, collapsing again when clicked away.">
+    <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/36-hidden-search-bar/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/36-hidden-search-bar/">
+  <meta property="og:title" content="Hidden Expanding Search Bar">
+  <meta property="og:description" content="A search icon that expands into a smooth sliding search input field, collapsing again when clicked away.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hidden Expanding Search Bar">
+  <meta name="twitter:description" content="A search icon that expands into a smooth sliding search input field, collapsing again when clicked away.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+    <main class="stage">
+        <div class="search-bar" id="searchBar">
+            <button class="search-icon" id="toggleBtn" aria-label="Toggle search">
+                <span class="magnifier"></span>
+            </button>
+            <form class="search-form" id="searchForm" role="search">
+                <input type="search" id="searchInput" class="search-input"
+                    placeholder="Search the galaxy..." aria-label="Search">
+            </form>
+        </div>
+        <p class="hint" id="hint">Click the icon to open the search.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

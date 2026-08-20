@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Steps Wizard</title>
+  <meta name="description" content="A multi-step wizard with numbered circles connected by an animated progress line and Next and Previous buttons.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/35-progress-steps-html-css-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/35-progress-steps-html-css-js/">
+  <meta property="og:title" content="Progress Steps Wizard">
+  <meta property="og:description" content="A multi-step wizard with numbered circles connected by an animated progress line and Next and Previous buttons.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Progress Steps Wizard">
+  <meta name="twitter:description" content="A multi-step wizard with numbered circles connected by an animated progress line and Next and Previous buttons.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="container">
+    <h1 class="title">Checkout Wizard</h1>
+    <p class="subtitle">Complete each step to place your order</p>
+
+    <div class="progress-wrap">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+        <div class="step" data-step="1">
+          <span class="step-number">1</span>
+          <span class="step-label">Cart</span>
+        </div>
+        <div class="step" data-step="2">
+          <span class="step-number">2</span>
+          <span class="step-label">Details</span>
+        </div>
+        <div class="step" data-step="3">
+          <span class="step-number">3</span>
+          <span class="step-label">Payment</span>
+        </div>
+        <div class="step" data-step="4">
+          <span class="step-number">4</span>
+          <span class="step-label">Confirm</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel active" data-panel="1">
+      <h2>Your Cart</h2>
+      <p>You have 2 items ready to check out.</p>
+    </div>
+    <div class="panel" data-panel="2">
+      <h2>Delivery Details</h2>
+      <p>Enter your shipping address and contact information.</p>
+    </div>
+    <div class="panel" data-panel="3">
+      <h2>Payment Method</h2>
+      <p>Choose a credit card, PayPal, or cash on delivery.</p>
+    </div>
+    <div class="panel" data-panel="4">
+      <h2>Almost Done</h2>
+      <p>Review your order and confirm to finish.</p>
+    </div>
+
+    <div class="buttons">
+      <button id="prevBtn" class="btn btn-outline" disabled>Previous</button>
+      <button id="nextBtn" class="btn btn-primary">Next</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

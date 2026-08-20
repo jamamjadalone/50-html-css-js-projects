@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Calendar</title>
+  <meta name="description" content="An interactive monthly calendar with navigation, weekend highlighting and date selection.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/32-calendar-html-css-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/32-calendar-html-css-js/">
+  <meta property="og:title" content="Interactive Calendar">
+  <meta property="og:description" content="An interactive monthly calendar with navigation, weekend highlighting and date selection.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interactive Calendar">
+  <meta name="twitter:description" content="An interactive monthly calendar with navigation, weekend highlighting and date selection.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <div class="app">
+    <header class="calendar-header">
+      <button id="prev-btn" class="nav-btn" type="button" aria-label="Previous month">&lt;</button>
+      <h1 id="month-label">Month Year</h1>
+      <button id="next-btn" class="nav-btn" type="button" aria-label="Next month">&gt;</button>
+    </header>
+    <div class="weekdays">
+      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+      <span>Thu</span><span>Fri</span><span>Sat</span>
+    </div>
+    <div id="days-grid" class="days-grid"></div>
+    <footer class="calendar-footer">
+      <span>Selected: <strong id="selected-date">None</strong></span>
+      <span id="today-label"></span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

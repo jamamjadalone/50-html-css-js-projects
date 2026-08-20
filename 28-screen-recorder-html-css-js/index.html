@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Recorder</title>
+  <meta name="description" content="Record your screen with a live timer and download the video, powered by the MediaRecorder API.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/28-screen-recorder-html-css-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/28-screen-recorder-html-css-js/">
+  <meta property="og:title" content="Screen Recorder">
+  <meta property="og:description" content="Record your screen with a live timer and download the video, powered by the MediaRecorder API.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Screen Recorder">
+  <meta name="twitter:description" content="Record your screen with a live timer and download the video, powered by the MediaRecorder API.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <div class="recorder">
+    <h1>Screen Recorder</h1>
+    <p class="status" id="status">Ready to record</p>
+    <div class="timer" id="timer">00:00</div>
+    <div class="buttons">
+      <button id="start-btn" class="btn btn-primary" type="button">Start</button>
+      <button id="pause-btn" class="btn btn-warning" type="button" disabled>Pause</button>
+      <button id="stop-btn" class="btn btn-danger" type="button" disabled>Stop</button>
+      <button id="download-btn" class="btn btn-success" type="button" disabled>Download</button>
+    </div>
+    <video id="preview" muted playsinline></video>
+    <p id="error" class="error hidden"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

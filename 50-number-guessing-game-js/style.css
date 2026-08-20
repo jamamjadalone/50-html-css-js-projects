@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-top: #052e16;
+  --bg-bottom: #03150a;
+  --accent: #22c55e;
+  --accent-2: #4ade80;
+  --warm: #fbbf24;
+  --cool: #38bdf8;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+  --danger: #f87171;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(900px 600px at 60% 0%, #14532d, var(--bg-top)) ,
+              linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+  color: var(--text);
+  padding: 1.5rem;
+}
+
+.game {
+  width: 100%;
+  max-width: 440px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2.4rem 2rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.card h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hint-line {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.hint-line strong {
+  color: var(--accent-2);
+}
+
+.guess-form {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+
+.guess-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: textfield;
+}
+
+.guess-form input::-webkit-outer-spin-button,
+.guess-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.guess-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #04140a;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 8px 22px rgba(34, 197, 94, 0.35);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(34, 197, 94, 0.45);
+}
+
+.btn-ghost {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.message {
+  margin-top: 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  animation: fade-up 0.3s ease;
+}
+
+.message.high {
+  color: var(--warm);
+}
+
+.message.low {
+  color: var(--cool);
+}
+
+.message.win {
+  color: var(--accent-2);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.message.error {
+  color: var(--danger);
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+
+.attempts {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.attempts span {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.history {
+  list-style: none;
+  margin-top: 1.1rem;
+  max-height: 180px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.history li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+.history li.high {
+  color: var(--warm);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.history li.low {
+  color: var(--cool);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.history li.win {
+  color: var(--accent-2);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    padding: 1.8rem 1.2rem;
+  }
+  .guess-form {
+    flex-direction: column;
+  }
+  .guess-form input,
+  .guess-form .btn {
+    width: 100%;
+  }
+}

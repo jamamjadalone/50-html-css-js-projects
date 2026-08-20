@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game - Guess the Number 1-100</title>
+  <meta name="description" content="Guess a secret number between 1 and 100 with too high and too low hints, an attempt counter and a play again option.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/50-number-guessing-game-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/50-number-guessing-game-js/">
+  <meta property="og:title" content="Number Guessing Game - Guess the Number 1-100">
+  <meta property="og:description" content="Guess a secret number between 1 and 100 with too high and too low hints, an attempt counter and a play again option.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Number Guessing Game - Guess the Number 1-100">
+  <meta name="twitter:description" content="Guess a secret number between 1 and 100 with too high and too low hints, an attempt counter and a play again option.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="game">
+    <div class="card">
+      <span class="badge">Number Guessing Game</span>
+      <h1>Guess the Number</h1>
+      <p class="hint-line">
+        I'm thinking of a number between <strong>1</strong> and <strong>100</strong>.
+      </p>
+
+      <form class="guess-form" id="guess-form" novalidate>
+        <input
+          type="number"
+          id="guess-input"
+          min="1"
+          max="100"
+          placeholder="Enter your guess"
+          inputmode="numeric"
+          required
+        >
+        <button type="submit" class="btn">Guess</button>
+      </form>
+
+      <p class="message" id="message" hidden></p>
+
+      <div class="stats-row">
+        <p class="attempts">Attempts: <span id="attempts">0</span></p>
+        <button class="btn btn-ghost" id="play-again-btn" hidden>Play Again</button>
+      </div>
+
+      <ul class="history" id="history"></ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

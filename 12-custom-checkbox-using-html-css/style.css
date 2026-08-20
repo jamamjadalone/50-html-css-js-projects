@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #0f172a, #312e81, #1e1b4b);
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 460px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.panel-header h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.panel-header p {
+    color: #a5b4fc;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.3s ease, border-color 0.3s ease;
+    user-select: none;
+}
+
+.check-item:hover {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.check-item input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    border: 2px solid #6366f1;
+    background: rgba(99, 102, 241, 0.15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.checkmark::after {
+    content: "";
+    width: 12px;
+    height: 7px;
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    transform: rotate(-45deg) scale(0);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.check-item input:checked + .checkmark {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-color: #a855f7;
+    box-shadow: 0 0 16px rgba(168, 85, 247, 0.7);
+}
+
+.check-item input:checked + .checkmark::after {
+    transform: rotate(-45deg) scale(1);
+}
+
+.check-item input:focus-visible + .checkmark {
+    outline: 2px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+.check-item:active .checkmark {
+    transform: scale(0.9);
+}
+
+.check-label {
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 420px) {
+    .panel {
+        padding: 1.8rem 1.2rem;
+    }
+}

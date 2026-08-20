@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator - Exact Age in Years, Months &amp; Days</title>
+  <meta name="description" content="Find out your exact age in years, months and days by selecting your birth date in this free online age calculator.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/45-age-calculator-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/45-age-calculator-js/">
+  <meta property="og:title" content="Age Calculator - Exact Age in Years, Months &amp; Days">
+  <meta property="og:description" content="Find out your exact age in years, months and days by selecting your birth date in this free online age calculator.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Age Calculator - Exact Age in Years, Months &amp; Days">
+  <meta name="twitter:description" content="Find out your exact age in years, months and days by selecting your birth date in this free online age calculator.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="app">
+    <div class="card">
+      <header class="header">
+        <span class="badge">Age Calculator</span>
+        <h1>How old are you?</h1>
+        <p>Pick your birth date and see your exact age in years, months and days.</p>
+      </header>
+
+      <form class="form" id="age-form" novalidate>
+        <label for="birthdate">Birth Date</label>
+        <div class="input-row">
+          <input type="date" id="birthdate" required>
+          <button type="submit" class="btn" id="calculate-btn">Calculate</button>
+        </div>
+        <p class="error" id="error" hidden></p>
+      </form>
+
+      <section class="result" id="result" hidden>
+        <div class="stat">
+          <span class="stat-value" id="years">0</span>
+          <span class="stat-label">Years</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="months">0</span>
+          <span class="stat-label">Months</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="days">0</span>
+          <span class="stat-label">Days</span>
+        </div>
+      </section>
+
+      <section class="extra" id="extra" hidden>
+        <p class="extra-line"><span id="total-days"></span></p>
+        <p class="extra-line"><span id="next-birthday"></span></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f1f5f9, #dbeafe);
+}
+
+.toggle-page {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2.5rem 2.2rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+}
+
+h1 {
+    color: #0f172a;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.toggle-page > p {
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.demo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.switch-label {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.98rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.track {
+    display: block;
+    border-radius: 50px;
+    background: #cbd5e1;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.knob {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.small .track {
+    width: 44px;
+    height: 24px;
+}
+
+.small .knob {
+    width: 18px;
+    height: 18px;
+}
+
+.small input:checked + .track .knob {
+    left: 22px;
+}
+
+.large .track {
+    width: 64px;
+    height: 34px;
+}
+
+.large .knob {
+    width: 26px;
+    height: 26px;
+}
+
+.large input:checked + .track .knob {
+    left: 34px;
+}
+
+.switch input:checked + .track {
+    background: #34d399;
+}
+
+.blue input:checked + .track {
+    background: #3b82f6;
+}
+
+.green input:checked + .track {
+    background: #22c55e;
+}
+
+.purple input:checked + .track {
+    background: #a855f7;
+}
+
+.blue input:checked + .track {
+    box-shadow: 0 0 14px rgba(59, 130, 246, 0.55);
+}
+
+.green input:checked + .track {
+    box-shadow: 0 0 14px rgba(34, 197, 94, 0.55);
+}
+
+.purple input:checked + .track {
+    box-shadow: 0 0 14px rgba(168, 85, 247, 0.55);
+}
+
+.switch input:focus-visible + .track {
+    outline: 2px solid #94a3b8;
+    outline-offset: 3px;
+}
+
+.state-text {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+    min-width: 34px;
+    text-align: right;
+}
+
+.state-text.on {
+    color: #10b981;
+}
+
+.state-text.off {
+    color: #94a3b8;
+}
+
+@media (max-width: 400px) {
+    .toggle-page {
+        padding: 1.8rem 1.2rem;
+    }
+}

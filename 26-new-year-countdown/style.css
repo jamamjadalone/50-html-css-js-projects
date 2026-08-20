@@ -1,0 +1,132 @@
+:root {
+  --bg-gradient-1: #0f0c29;
+  --bg-gradient-2: #302b63;
+  --bg-gradient-3: #24243e;
+  --box-bg: rgba(255, 255, 255, 0.08);
+  --box-border: rgba(255, 255, 255, 0.15);
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --accent: #f8c630;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  padding: 1rem;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--accent), #ff7e5f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.target-year {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: var(--box-bg);
+  border: 1px solid var(--box-border);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  width: 140px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+}
+
+.number {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, var(--accent), #ff9a3d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.label {
+  display: block;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.party {
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  animation: pop 0.6s ease infinite alternate;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    gap: 0.8rem;
+  }
+  .box {
+    width: 76px;
+    padding: 1rem 0.5rem;
+  }
+  .number {
+    font-size: 2rem;
+  }
+}

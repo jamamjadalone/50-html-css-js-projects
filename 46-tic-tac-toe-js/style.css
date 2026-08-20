@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-top: #111827;
+  --bg-bottom: #0b1220;
+  --accent-x: #38bdf8;
+  --accent-o: #f472b6;
+  --accent-win: #fbbf24;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --cell: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 700px at 70% 20%, #1e293b, var(--bg-top)) ,
+              linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+  color: var(--text);
+  padding: 1.5rem;
+}
+
+.game {
+  width: 100%;
+  max-width: 430px;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+.score {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 0.85rem 0.5rem;
+}
+
+.score-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.score-value {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.player-x .score-value {
+  color: var(--accent-x);
+}
+
+.player-o .score-value {
+  color: var(--accent-o);
+}
+
+.status {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  min-height: 1.6rem;
+  transition: color 0.2s;
+}
+
+.status.won {
+  color: var(--accent-win);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.cell {
+  aspect-ratio: 1;
+  font-family: inherit;
+  font-size: clamp(2.2rem, 10vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text);
+  background: var(--cell);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.cell:hover:not(.taken) {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.cell.x {
+  color: var(--accent-x);
+}
+
+.cell.o {
+  color: var(--accent-o);
+}
+
+.cell.win {
+  background: rgba(251, 191, 36, 0.18);
+  border-color: var(--accent-win);
+  animation: pop 0.4s ease;
+}
+
+.board.draw .cell {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #0b1220;
+  background: var(--accent-win);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+  box-shadow: 0 8px 22px rgba(251, 191, 36, 0.35);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(251, 191, 36, 0.45);
+}
+
+.btn-ghost {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+@media (max-width: 380px) {
+  .board {
+    gap: 0.45rem;
+  }
+  .controls {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+}

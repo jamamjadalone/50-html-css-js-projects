@@ -1,0 +1,119 @@
+:root {
+  --bg: #0f1020;
+  --surface: #1b1d31;
+  --border: #2c2f49;
+  --text: #f1f2ff;
+  --muted: #9a9dbb;
+  --accent: #7c5cff;
+  --tab-bg: #242743;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content {
+  flex: 1;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  position: absolute;
+  max-width: 480px;
+  width: 90%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.panel.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.panel p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.tab-bar {
+  position: relative;
+  display: flex;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 0.75rem;
+}
+
+.tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.9rem 0.25rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease;
+  border-radius: 12px;
+}
+
+.tab.active {
+  color: var(--accent);
+}
+
+.indicator {
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  left: 0;
+  width: 20%;
+  background: var(--tab-bg);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+  pointer-events: none;
+}
+
+.indicator.left-0 { transform: translateX(0%); }
+.indicator.left-1 { transform: translateX(100%); }
+.indicator.left-2 { transform: translateX(200%); }
+.indicator.left-3 { transform: translateX(300%); }
+.indicator.left-4 { transform: translateX(400%); }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Custom Checkboxes</title>
+    <meta name="description" content="Circular gradient checkboxes with a smooth scale and pop-in animation for picking subscription options.">
+    <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/22-custom-checkbox-css/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/22-custom-checkbox-css/">
+  <meta property="og:title" content="Gradient Custom Checkboxes">
+  <meta property="og:description" content="Circular gradient checkboxes with a smooth scale and pop-in animation for picking subscription options.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gradient Custom Checkboxes">
+  <meta name="twitter:description" content="Circular gradient checkboxes with a smooth scale and pop-in animation for picking subscription options.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+    <main class="container">
+        <section class="panel">
+            <h1>Choose your plan</h1>
+            <p class="subtitle">Pick one or more extras to add to your subscription.</p>
+
+            <form id="planForm" class="options">
+                <label class="option">
+                    <input type="checkbox" name="extras" value="priority" checked>
+                    <span class="check"></span>
+                    <span class="option-body">
+                        <span class="option-title">Priority support</span>
+                        <span class="option-desc">Talk to a human within 5 minutes</span>
+                    </span>
+                    <span class="price">+$4</span>
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="extras" value="storage">
+                    <span class="check"></span>
+                    <span class="option-body">
+                        <span class="option-title">Extra storage</span>
+                        <span class="option-desc">100 GB of cloud space</span>
+                    </span>
+                    <span class="price">+$7</span>
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="extras" value="analytics">
+                    <span class="check"></span>
+                    <span class="option-body">
+                        <span class="option-title">Analytics suite</span>
+                        <span class="option-desc">Advanced usage reports and dashboards</span>
+                    </span>
+                    <span class="price">+$12</span>
+                </label>
+            </form>
+
+            <p class="result" id="result">Selected: Priority support</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

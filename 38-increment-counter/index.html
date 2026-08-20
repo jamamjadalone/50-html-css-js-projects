@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Increment Counter</title>
+  <meta name="description" content="Animated counters that count up to a target value when scrolled into view, plus a manual plus and minus stepper.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/38-increment-counter/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/38-increment-counter/">
+  <meta property="og:title" content="Increment Counter">
+  <meta property="og:description" content="Animated counters that count up to a target value when scrolled into view, plus a manual plus and minus stepper.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Increment Counter">
+  <meta name="twitter:description" content="Animated counters that count up to a target value when scrolled into view, plus a manual plus and minus stepper.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <section class="stats" id="stats">
+    <div class="stat-card">
+      <span class="stat-icon">U</span>
+      <span class="stat-value" data-target="12000">0</span>
+      <span class="stat-label">Happy Users</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">C</span>
+      <span class="stat-value" data-target="850">0</span>
+      <span class="stat-label">Cities Covered</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">R</span>
+      <span class="stat-value" data-target="42000">0</span>
+      <span class="stat-label">App Downloads</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">S</span>
+      <span class="stat-value" data-target="99">0</span>
+      <span class="stat-label">Support Rating</span>
+    </div>
+  </section>
+
+  <section class="manual">
+    <h2>Manual Counter</h2>
+    <div class="counter-box">
+      <button id="decrementBtn" class="counter-btn" aria-label="Decrease">-</button>
+      <span id="manualCount" class="manual-count">0</span>
+      <button id="incrementBtn" class="counter-btn" aria-label="Increase">+</button>
+    </div>
+    <div class="counter-controls">
+      <button id="resetBtn" class="reset-btn">Reset</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

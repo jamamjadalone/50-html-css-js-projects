@@ -1,2 +1,8 @@
 User-agent: *
 Allow: /
+
+# Crawl-delay is ignored by most major search engines; kept for older bots
+Crawl-delay: 1
+
+# Sitemap location for search engines
+Sitemap: https://jamamjadalone.github.io/50-html-css-js-projects/sitemap.xml

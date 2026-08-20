@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --surface: #273449;
+  --primary: #6366f1;
+  --accent: #22d3ee;
+  --success: #10b981;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, #0f172a, #111827);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: var(--text);
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin: 0.4rem 0 2rem;
+}
+
+.snippets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.snippet {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.1rem 1.25rem;
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.snippet:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateX(4px);
+}
+
+.snippet-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.snippet-text {
+  font-family: 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.88rem;
+  color: var(--text);
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.copy-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.6rem 1.3rem;
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.copy-btn:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.copy-btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+}
+
+.copy-btn.copied {
+  background: var(--success);
+}
+
+.copy-btn:disabled {
+  cursor: default;
+}
+
+.custom {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.custom label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.input-row {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.input-row input {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.input-row input:focus {
+  border-color: var(--primary);
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 120%);
+  background: var(--success);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.35);
+  transition: transform 0.4s cubic-bezier(0.21, 1.02, 0.73, 1);
+  z-index: 100;
+}
+
+.toast.show {
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 640px) {
+  .snippet {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+}

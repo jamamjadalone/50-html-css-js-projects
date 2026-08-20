@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy to Clipboard</title>
+  <meta name="description" content="A clipboard utility with copy buttons for text snippets and an input field, with visual copied feedback.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/42-copy-to-clipboard-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/42-copy-to-clipboard-js/">
+  <meta property="og:title" content="Copy to Clipboard">
+  <meta property="og:description" content="A clipboard utility with copy buttons for text snippets and an input field, with visual copied feedback.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Copy to Clipboard">
+  <meta name="twitter:description" content="A clipboard utility with copy buttons for text snippets and an input field, with visual copied feedback.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="container">
+    <h1>Copy to Clipboard</h1>
+    <p class="subtitle">Click any copy button to grab the text</p>
+
+    <section class="snippets" id="snippets">
+      <div class="snippet">
+        <p class="snippet-label">Git clone URL</p>
+        <code class="snippet-text">git clone https://github.com/octocat/Hello-World.git</code>
+        <button class="copy-btn" data-copy="git clone https://github.com/octocat/Hello-World.git">
+          <span class="btn-text">Copy</span>
+        </button>
+      </div>
+      <div class="snippet">
+        <p class="snippet-label">CSS gradient</p>
+        <code class="snippet-text">background: linear-gradient(135deg, #667eea, #764ba2);</code>
+        <button class="copy-btn" data-copy="background: linear-gradient(135deg, #667eea, #764ba2);">
+          <span class="btn-text">Copy</span>
+        </button>
+      </div>
+      <div class="snippet">
+        <p class="snippet-label">JSON snippet</p>
+        <code class="snippet-text">{"name": "Ada Lovelace", "role": "Programmer"}</code>
+        <button class="copy-btn" data-copy='{"name": "Ada Lovelace", "role": "Programmer"}'>
+          <span class="btn-text">Copy</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="custom">
+      <label for="customInput">Custom text</label>
+      <div class="input-row">
+        <input type="text" id="customInput" placeholder="Type or paste anything here..." value="https://example.com/signup?ref=invite123">
+        <button class="copy-btn primary" id="customCopyBtn">
+          <span class="btn-text">Copy</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

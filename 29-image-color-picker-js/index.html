@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Color Picker</title>
+  <meta name="description" content="Click any pixel of an image to get its HEX and RGB color with a magnified preview and color history.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/29-image-color-picker-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/29-image-color-picker-js/">
+  <meta property="og:title" content="Image Color Picker">
+  <meta property="og:description" content="Click any pixel of an image to get its HEX and RGB color with a magnified preview and color history.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Image Color Picker">
+  <meta name="twitter:description" content="Click any pixel of an image to get its HEX and RGB color with a magnified preview and color history.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Image Color Picker</h1>
+      <label class="upload-btn">
+        Change Image
+        <input type="file" id="image-input" accept="image/*" hidden>
+      </label>
+    </header>
+    <main>
+      <div class="canvas-wrap">
+        <canvas id="image-canvas"></canvas>
+        <div class="magnifier hidden" id="magnifier">
+          <canvas id="magnifier-canvas" width="120" height="120"></canvas>
+        </div>
+      </div>
+      <aside class="panel">
+        <div class="swatch" id="color-swatch">No color selected</div>
+        <div class="color-info">
+          <p><span class="label">HEX</span><span id="hex-value">---</span></p>
+          <p><span class="label">RGB</span><span id="rgb-value">---</span></p>
+        </div>
+        <h2>Recently picked</h2>
+        <ul id="history" class="history"></ul>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

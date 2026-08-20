@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Search & Filter</title>
+  <meta name="description" content="A live search filter that filters profile cards by name and role as you type, with category filter buttons.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/34-search-filter-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/34-search-filter-js/">
+  <meta property="og:title" content="Live Search & Filter">
+  <meta property="og:description" content="A live search filter that filters profile cards by name and role as you type, with category filter buttons.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Live Search & Filter">
+  <meta name="twitter:description" content="A live search filter that filters profile cards by name and role as you type, with category filter buttons.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Team Directory</h1>
+      <input type="search" id="search" class="search" placeholder="Search by name or role...">
+    </header>
+    <div id="filters" class="filters"></div>
+    <div id="cards" class="cards"></div>
+    <p id="no-results" class="no-results hidden">No people match your search.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

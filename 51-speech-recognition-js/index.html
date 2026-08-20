@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech Recognition Demo - Voice to Text</title>
+  <meta name="description" content="Speak into your microphone and see live speech-to-text results using the Web Speech API in your browser.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/51-speech-recognition-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/51-speech-recognition-js/">
+  <meta property="og:title" content="Speech Recognition Demo - Voice to Text">
+  <meta property="og:description" content="Speak into your microphone and see live speech-to-text results using the Web Speech API in your browser.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Speech Recognition Demo - Voice to Text">
+  <meta name="twitter:description" content="Speak into your microphone and see live speech-to-text results using the Web Speech API in your browser.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="app">
+    <div class="card">
+      <span class="badge">Speech Recognition</span>
+      <h1>Voice to Text</h1>
+      <p class="subtitle">Press the mic, speak, and watch your words appear.</p>
+
+      <div class="mic-wrap">
+        <button class="mic" id="mic-btn" aria-label="Start or stop speech recognition">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+            <path d="M5 10v1a7 7 0 0 0 14 0v-1"></path>
+            <line x1="12" y1="19" x2="12" y2="22"></line>
+          </svg>
+        </button>
+      </div>
+
+      <p class="status" id="status">Press the mic and start talking</p>
+      <p class="interim" id="interim"></p>
+
+      <div class="transcript-wrap">
+        <div class="transcript" id="transcript" aria-live="polite">
+          <span class="placeholder" id="placeholder">Your transcript will appear here...</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="clear-btn">Clear</button>
+      </div>
+
+      <p class="warning" id="warning" hidden>
+        Your browser does not support the Web Speech API. Try Chrome, Edge or Safari with a secure connection.
+      </p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

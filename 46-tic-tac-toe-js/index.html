@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe Game - Two Player Board Game</title>
+  <meta name="description" content="Play a classic two-player Tic Tac Toe game in the browser with win detection, score tracking and a restart button.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/46-tic-tac-toe-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/46-tic-tac-toe-js/">
+  <meta property="og:title" content="Tic Tac Toe Game - Two Player Board Game">
+  <meta property="og:description" content="Play a classic two-player Tic Tac Toe game in the browser with win detection, score tracking and a restart button.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tic Tac Toe Game - Two Player Board Game">
+  <meta name="twitter:description" content="Play a classic two-player Tic Tac Toe game in the browser with win detection, score tracking and a restart button.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+  <main class="game">
+    <h1 class="title">Tic Tac Toe</h1>
+
+    <div class="scoreboard">
+      <div class="score player-x">
+        <span class="score-label">X Wins</span>
+        <span class="score-value" id="score-x">0</span>
+      </div>
+      <div class="score draws">
+        <span class="score-label">Draws</span>
+        <span class="score-value" id="score-draw">0</span>
+      </div>
+      <div class="score player-o">
+        <span class="score-label">O Wins</span>
+        <span class="score-value" id="score-o">0</span>
+      </div>
+    </div>
+
+    <p class="status" id="status">Player X's turn</p>
+
+    <div class="board" id="board" aria-label="Game board"></div>
+
+    <div class="controls">
+      <button class="btn" id="restart-btn">Restart</button>
+      <button class="btn btn-ghost" id="reset-scores-btn">Reset Scores</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

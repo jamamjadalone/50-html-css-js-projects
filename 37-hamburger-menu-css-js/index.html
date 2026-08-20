@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Hamburger Menu</title>
+    <meta name="description" content="A hamburger icon that morphs into an X and reveals a full-screen overlay menu with staggered link animations.">
+    <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://jamamjadalone.github.io/50-html-css-js-projects/37-hamburger-menu-css-js/">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamamjadalone.github.io/50-html-css-js-projects/37-hamburger-menu-css-js/">
+  <meta property="og:title" content="Animated Hamburger Menu">
+  <meta property="og:description" content="A hamburger icon that morphs into an X and reveals a full-screen overlay menu with staggered link animations.">
+  <meta property="og:site_name" content="50+ HTML CSS JS Projects">
+  <meta property="og:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Animated Hamburger Menu">
+  <meta name="twitter:description" content="A hamburger icon that morphs into an X and reveals a full-screen overlay menu with staggered link animations.">
+  <meta name="twitter:image" content="https://jamamjadalone.github.io/50-html-css-js-projects/og-image.svg"></head>
+<body>
+    <header class="topbar">
+        <a href="#" class="brand">Bloom</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+        </button>
+    </header>
+
+    <nav class="overlay" id="overlay" aria-hidden="true">
+        <ul class="menu">
+            <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Work</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">About</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Services</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+        </ul>
+        <p class="overlay-note">Bloom Studio</p>
+    </nav>
+
+    <main class="hero" id="hero">
+        <h1>We craft digital<br>experiences that <span>bloom</span>.</h1>
+        <p>Open the menu above to see the animated overlay in action.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
